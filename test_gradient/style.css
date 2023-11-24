@@ -1,0 +1,5 @@
+article {
+    height: 200vh;
+    width: 100vh;
+    background: linear-gradient(90deg, rgb(0, 110, 255), rgb(132, 0, 255));
+}
