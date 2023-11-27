@@ -5,6 +5,10 @@
 
 .container {
   text-align: center;
+  display: grid;
+  gap: 4px;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 1fr 5fr 1fr;
 }
 
 .container div {
@@ -13,19 +17,31 @@
   font-family: Helvetica;
   font-weight: bold;
   color: white;
+
 }
 
 .header {
   background-color: #393f4d;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-area: 1 / 1 / 2 / 3;
 }
 
 .menu ul,
 .menu li {
   font-size: 16px;
+  list-style-type: none;
+
+}
+
+.menu ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .sidebar {
   background-color: #C50208;
+  grid-area: 2 / 1 / -2 / 2;
 }
 
 .sidebar .photo {
@@ -46,6 +62,7 @@
 
 .nav {
   background-color: #C50208;
+  grid-area: 2 / 2 / 3 / -1;
 }
 
 .nav ul li {
@@ -55,6 +72,7 @@
 
 .article {
   background-color: #bccbde;
+  grid-area: 3 / 2 / -2 / -1;
 }
 
 .article p {
@@ -83,9 +101,14 @@
 
 .footer {
   background-color: #393f4d;
+  grid-area: -2 / 1 / -1 / -1;
 }
 
 .footer p {
   font-size: 13px;
   font-weight: normal;
+}
+
+.logo {
+  justify-self: left;
 }
